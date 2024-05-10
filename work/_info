@@ -34,16 +34,16 @@ Z6 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
 !s85 0
 !s100 2H_g8kV8[YoOIkzRdi=JW3
 !s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/alu.v|
-!s108 1715334235.110000
+!s108 1715334933.498000
 !s107 ctrl_encode_def.v|D:/class/mipscpu/mipscpu_sim/alu.v|
 !i10b 1
 vctrl
 Vi9VAR206mNG]djFbf9UmC0
 r1
 31
-IKg9hVlY=2?P_YKR@Q1dQD0
+Ig93IWMB]QA@F>FNA4H`A12
 R4
-w1715334205
+w1715334897
 8D:/class/mipscpu/mipscpu_sim/ctrl.v
 FD:/class/mipscpu/mipscpu_sim/ctrl.v
 L0 5
@@ -51,8 +51,8 @@ R5
 R6
 !s85 0
 !s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/ctrl.v|
-!s100 z9CQG<@MA^X=k53R`UQjl1
-!s108 1715334235.163000
+!s100 6Elo>1_Q@XanDNk<cJU_D1
+!s108 1715334933.542000
 !s107 D:/class/mipscpu/mipscpu_sim/ctrl.v|
 !i10b 1
 vdm
@@ -70,7 +70,7 @@ R6
 !s85 0
 !s100 gXb[4Xhm<zdz8bmTboUH33
 !s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/dm.v|
-!s108 1715334235.572000
+!s108 1715334933.938000
 !s107 D:/class/mipscpu/mipscpu_sim/dm.v|
 !i10b 1
 vEXT
@@ -89,7 +89,7 @@ n@e@x@t
 !s85 0
 !s100 ODndP4N184c]=fWJYnFD41
 !s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/EXT.v|
-!s108 1715334235.263000
+!s108 1715334933.628000
 !s107 D:/class/mipscpu/mipscpu_sim/EXT.v|
 !i10b 1
 vim
@@ -107,7 +107,7 @@ R5
 R6
 !s100 `4zE`I[H`RPh<9dAM9;Cb3
 !s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/im.v|
-!s108 1715334235.622000
+!s108 1715334933.987000
 !s107 D:/class/mipscpu/mipscpu_sim/im.v|
 !i10b 1
 vmux16
@@ -121,7 +121,7 @@ L0 71
 R5
 r1
 31
-Z10 !s108 1715334235.315000
+Z10 !s108 1715334933.677000
 Z11 !s107 D:/class/mipscpu/mipscpu_sim/mux.v|
 Z12 !s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/mux.v|
 R6
@@ -188,7 +188,7 @@ r1
 31
 I2YS[gE:8LEnG[V:H8l]NI0
 R4
-w1714302203
+w1715334457
 8D:/class/mipscpu/mipscpu_sim/NPC.v
 FD:/class/mipscpu/mipscpu_sim/NPC.v
 L0 3
@@ -198,7 +198,7 @@ n@n@p@c
 !s85 0
 !s100 L[SZcGdcT:BB9BhgONolK0
 !s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/NPC.v|
-!s108 1715334235.387000
+!s108 1715334933.748000
 !s107 ctrl_encode_def.v|D:/class/mipscpu/mipscpu_sim/NPC.v|
 !i10b 1
 vPC
@@ -217,7 +217,7 @@ n@p@c
 !s85 0
 !s100 XlK`_UkD@2h5Z?_afU^P20
 !s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/PC.v|
-!s108 1715334235.434000
+!s108 1715334933.796000
 !s107 D:/class/mipscpu/mipscpu_sim/PC.v|
 !i10b 1
 vRF
@@ -236,7 +236,7 @@ n@r@f
 !s85 0
 !s100 nMAz8<To`5KehAn8Lk0IZ3
 !s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/RF.v|
-!s108 1715334235.483000
+!s108 1715334933.845000
 !s107 D:/class/mipscpu/mipscpu_sim/RF.v|
 !i10b 1
 vsccomp
@@ -254,7 +254,7 @@ R6
 !s85 0
 !s100 2oDBia;kE:I;@^L?UBnU20
 !s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/sccomp.v|
-!s108 1715334235.673000
+!s108 1715334934.036000
 !s107 D:/class/mipscpu/mipscpu_sim/sccomp.v|
 !i10b 1
 vsccomp_tb
@@ -273,7 +273,7 @@ R6
 !s100 Gh[OS@6Jfke10XS0kLoJf3
 !s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/sccomp_tb.v|
 !i10b 1
-!s108 1715334235.721000
+!s108 1715334934.082000
 !s107 D:/class/mipscpu/mipscpu_sim/sccomp_tb.v|
 vsccpu
 V2nlHBHNd:OILV4c`<oPFP3
@@ -290,6 +290,6 @@ R6
 !s85 0
 !s100 Y3m0[J6^go9^9Qd85<0K73
 !s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/sccpu.v|
-!s108 1715334235.528000
+!s108 1715334933.891000
 !s107 D:/class/mipscpu/mipscpu_sim/sccpu.v|
 !i10b 1

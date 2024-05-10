@@ -57,7 +57,7 @@ module ctrl(Op, Funct, Zero,
    wire i_bne  = ~Op[5]&~Op[4]&~Op[3]& Op[2]&~Op[1]& Op[0]; // bne
    wire i_slti = ~Op[5]&~Op[4]& Op[3]&~Op[2]& Op[1]&~Op[0]; // slti 001010
    wire i_lui  = ~Op[5]&~Op[4]& Op[3]& Op[2]& Op[1]& Op[0]; // lui 001111
-   wire i_andi = ~Op[5]&~Op[4]& Op[3]&~Op[2]&~Op[1]& Op[0]; // andi 001100
+   wire i_andi = ~Op[5]&~Op[4]& Op[3]& Op[2]&~Op[1]&~Op[0]; // andi 001100
    wire i_lb   =  Op[5]&~Op[4]&~Op[3]&~Op[2]& Op[1]& Op[0]; // lb 100000
    wire i_lh   =  Op[5]&~Op[4]&~Op[3]&~Op[2]& Op[1]& Op[0]; // lh 100001
    wire i_lbu  =  Op[5]&~Op[4]&~Op[3]&~Op[2]& Op[1]& Op[0]; // lbu 100100
@@ -77,8 +77,8 @@ module ctrl(Op, Funct, Zero,
   assign MemWrite   = i_sw;         //修改过，记得看看对不对 memory write
   //alusrc信号
   assign ALUSrc     = i_lw | i_sw | i_addi | i_ori | i_slti | i_lui | i_andi;   // ALU B is from instruction immediate
- //暂时不知道是啥，闹麻了
-  assign EXTOp      = i_addi | i_lw | i_sw | i_slti;           // signed extension
+ //符号扩展
+  assign EXTOp      = i_addi | i_lw | i_sw | i_slti | i_andi;           // signed extension
   assign AregSel = i_sll | i_srl;
 
   // GPRSel_RD   1'b0
@@ -104,8 +104,8 @@ module ctrl(Op, Funct, Zero,
   // ALU_OR    3'b100
   // ALU_SLT   3'b101
   // ALU_SLTU  3'b110
-  assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_slti;
-  assign ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu | i_sll | i_lui;
+  assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_slti | i_andi;
+  assign ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu | i_sll | i_lui | i_andi;
   assign ALUOp[2] = i_or | i_ori | i_slt | i_sltu | i_sll | i_slti;
   assign ALUOp[3] = i_srl | i_srl | i_nor | i_lui;
 endmodule
