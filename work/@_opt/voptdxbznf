@@ -1,0 +1,286 @@
+m255
+K3
+13
+cModel Technology
+dC:\modelsim\examples
+T_opt
+Vd>m3HzZ2X4hj>[O0U>T?23
+04 3 4 work alu fast 0
+=1-d8bbc176b5b8-662e3503-191-a40
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OL;O;10.1c;51
+valu
+VBn`ji@JZJ?f27Qk1NoHCM0
+r1
+31
+IiXR77[oNB?3Ui3bCkfBeA2
+Z0 dD:\class\mipscpu\mipscpu_sim
+w1551514760
+8D:/class/mipscpu/mipscpu_sim/alu.v
+FD:/class/mipscpu/mipscpu_sim/alu.v
+L0 3
+Z1 OL;L;10.1c;51
+Z2 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s85 0
+!s100 DV;AE:B]mU6KL_<ceR1dY1
+!s108 1714300411.573000
+!s107 ctrl_encode_def.v|D:/class/mipscpu/mipscpu_sim/alu.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/alu.v|
+!i10b 1
+vctrl
+VHmAI2HCW6bh93kRL7DIE?2
+r1
+31
+Il[HMVALP6KaZj_cY@;j<92
+Z3 dD:\class\mipscpu\mipscpu_sim
+w1714211601
+8D:/class/mipscpu/mipscpu_sim/ctrl.v
+FD:/class/mipscpu/mipscpu_sim/ctrl.v
+L0 4
+R1
+R2
+!s85 0
+!s100 XRQE^Oi@f`E8`;e>OY`992
+!s108 1714300411.620000
+!s107 D:/class/mipscpu/mipscpu_sim/ctrl.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/ctrl.v|
+!i10b 1
+vdm
+VQ5kzjohU1HQB?iGHI7LOU0
+r1
+31
+I6mgAJSVTgWmLF6HCmj:Y]1
+R3
+w1572064098
+8D:/class/mipscpu/mipscpu_sim/dm.v
+FD:/class/mipscpu/mipscpu_sim/dm.v
+L0 3
+R1
+R2
+!s85 0
+!s100 DmE[P3;T8_^ed0X32O@^V0
+!s108 1714300412.009000
+!s107 D:/class/mipscpu/mipscpu_sim/dm.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/dm.v|
+!i10b 1
+vEXT
+V<;>E_N0WZjXOmgdkAPRL02
+r1
+31
+ILD6UAXAUc8[`9fc:T@8fj3
+R3
+w1572065286
+8D:/class/mipscpu/mipscpu_sim/EXT.v
+FD:/class/mipscpu/mipscpu_sim/EXT.v
+L0 2
+R1
+R2
+n@e@x@t
+!s85 0
+!s100 ODndP4N184c]=fWJYnFD41
+!s108 1714300411.705000
+!s107 D:/class/mipscpu/mipscpu_sim/EXT.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/EXT.v|
+!i10b 1
+vim
+VkoA3ibJYjK6f9b:B2VJKK0
+r1
+31
+ICOkBQ?gaC72n4hl1l8<Ob0
+R3
+w1551458228
+8D:/class/mipscpu/mipscpu_sim/im.v
+FD:/class/mipscpu/mipscpu_sim/im.v
+L0 3
+R1
+R2
+!s85 0
+!s100 `4zE`I[H`RPh<9dAM9;Cb3
+!s108 1714300412.057000
+!s107 D:/class/mipscpu/mipscpu_sim/im.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/im.v|
+!i10b 1
+vmux16
+I?k[=@7EGM74`OFmaj@:>03
+V`6=HBldE>cXC;m]K0;QI>0
+R3
+Z4 w1550765554
+Z5 8D:/class/mipscpu/mipscpu_sim/mux.v
+Z6 FD:/class/mipscpu/mipscpu_sim/mux.v
+L0 71
+R1
+r1
+31
+Z7 !s108 1714300411.756000
+Z8 !s107 D:/class/mipscpu/mipscpu_sim/mux.v|
+Z9 !s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/mux.v|
+R2
+!s100 8KCRQ3fG7_2I_3EG:VP2K0
+!i10b 1
+!s85 0
+vmux2
+VT8RWJBjAIeM]>7U=5kBkT1
+r1
+31
+I8[G;lU2U8@U_^4f?;XzS]0
+R3
+R4
+R5
+R6
+L0 2
+R1
+R7
+R8
+R9
+R2
+!s85 0
+!s100 jD4L0;=ZgYmbGFIY:7M[n1
+!i10b 1
+vmux4
+IDT2d_gVRL<CQS<>F]Hdkh0
+V@m74j;^3XFJ7>OzQXh6V`0
+R3
+R4
+R5
+R6
+L0 15
+R1
+r1
+31
+R7
+R8
+R9
+R2
+!s100 6^fZ_O>Y46PANM3[FXOYQ2
+!i10b 1
+!s85 0
+vmux8
+IX]kA22n2=k:c:a^9YoaDU3
+VOh>X<_n?620Z_^H7^I9KH2
+R3
+R4
+R5
+R6
+L0 40
+R1
+r1
+31
+R7
+R8
+R9
+R2
+!s100 zd=V7JGaOOJU^fo51RJ[;0
+!i10b 1
+!s85 0
+vNPC
+VM0b<M>?BI]?[jjz1eZRi32
+r1
+31
+IGJ9EK2CVI8@ZW41IbF7zC2
+R3
+w1551202020
+8D:/class/mipscpu/mipscpu_sim/NPC.v
+FD:/class/mipscpu/mipscpu_sim/NPC.v
+L0 3
+R1
+R2
+n@n@p@c
+!s85 0
+!s100 45zY`j0JDB7VDN6GNQ^I]0
+!s108 1714300411.825000
+!s107 ctrl_encode_def.v|D:/class/mipscpu/mipscpu_sim/NPC.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/NPC.v|
+!i10b 1
+vPC
+Vz>ZmmiZ`iG:Zc`EOFokET3
+r1
+31
+IfcmIfW^f@f1jKDb;h_bF:3
+R3
+w1550113688
+8D:/class/mipscpu/mipscpu_sim/PC.v
+FD:/class/mipscpu/mipscpu_sim/PC.v
+L0 1
+R1
+R2
+n@p@c
+!s85 0
+!s100 XlK`_UkD@2h5Z?_afU^P20
+!s108 1714300411.870000
+!s107 D:/class/mipscpu/mipscpu_sim/PC.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/PC.v|
+!i10b 1
+vRF
+VEWJn__zm[8SS3Z@zFLOZT3
+r1
+31
+IE67;=NFU3LC6QVKIRA;5Z3
+R3
+w1551271794
+8D:/class/mipscpu/mipscpu_sim/RF.v
+FD:/class/mipscpu/mipscpu_sim/RF.v
+L0 2
+R1
+R2
+n@r@f
+!s85 0
+!s100 gj`>[KD=m8khY=H<A^W:T2
+!s108 1714300411.917000
+!s107 D:/class/mipscpu/mipscpu_sim/RF.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/RF.v|
+!i10b 1
+vsccomp
+VgVBdf]6a]6QJ4FkU3fQ153
+r1
+31
+I2MEUnOKaK]mW:L;fSZj@40
+R3
+w1572073756
+8D:/class/mipscpu/mipscpu_sim/sccomp.v
+FD:/class/mipscpu/mipscpu_sim/sccomp.v
+L0 1
+R1
+R2
+!s85 0
+!s100 2oDBia;kE:I;@^L?UBnU20
+!s108 1714300412.103000
+!s107 D:/class/mipscpu/mipscpu_sim/sccomp.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/sccomp.v|
+!i10b 1
+vsccomp_tb
+VciK9E@b07zQnz0QWN@GCk0
+r1
+31
+IFeGISW?QTzEZeClGXeHU73
+R3
+w1571892268
+8D:/class/mipscpu/mipscpu_sim/sccomp_tb.v
+FD:/class/mipscpu/mipscpu_sim/sccomp_tb.v
+L0 3
+R1
+R2
+!s85 0
+!i10b 1
+!s100 JQj?hUOQoFWcaL8S^=j420
+!s108 1714300412.146000
+!s107 D:/class/mipscpu/mipscpu_sim/sccomp_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/sccomp_tb.v|
+vsccpu
+V2nlHBHNd:OILV4c`<oPFP3
+r1
+31
+I1[fU9;EG@]LXUOdf:Y4_W1
+R3
+w1552223888
+8D:/class/mipscpu/mipscpu_sim/sccpu.v
+FD:/class/mipscpu/mipscpu_sim/sccpu.v
+L0 1
+R1
+R2
+!s85 0
+!s100 <GzTW=^F4h]MFlYTH=jE>2
+!s108 1714300411.962000
+!s107 D:/class/mipscpu/mipscpu_sim/sccpu.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/class/mipscpu/mipscpu_sim/sccpu.v|
+!i10b 1
