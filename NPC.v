@@ -14,7 +14,7 @@ module NPC(PC, NPCOp, IMM, NPC);  // next pc module
    always @(*) begin
       case (NPCOp)
           `NPC_PLUS4:  NPC = PCPLUS4;
-          `NPC_BRANCH: NPC = PCPLUS4 + {{14{IMM[15]}}, IMM[15:0], 2'b00};
+          `NPC_BRANCH: NPC = PCPLUS4 + {{14{IMM[15]}}, IMM[15:0], 2'b00}; //bne beq
           `NPC_JUMP:   NPC = {PCPLUS4[31:28], IMM[25:0], 2'b00};
           //`NPC_JR:     NPC = RCJR;
           default:     NPC = PCPLUS4;
