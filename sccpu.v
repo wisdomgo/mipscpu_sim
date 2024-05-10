@@ -65,7 +65,7 @@ module sccpu( clk, rst, instr, readdata, PC, MemWrite, aluout, writedata, reg_se
    
    // instantiation of NPC
    NPC U_NPC ( 
-      .PC(PC), .NPCOp(NPCOp), .IMM(IMM), .NPC(NPC)
+      .PC(PC), .NPCOp(NPCOp), .IMM(IMM), .NPC(NPC), .RD1(RD1)  //jr时加入
    );
    
    // instantiation of register file

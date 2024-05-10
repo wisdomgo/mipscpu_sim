@@ -4,7 +4,7 @@
 `define NPC_PLUS4   2'b00 //PC值加4，通常用于顺序执行的下一条指令。
 `define NPC_BRANCH  2'b01 //当分支条件满足时，PC跳转到分支目标地址。
 `define NPC_JUMP    2'b10 //无条件跳转到指定的跳转地址。
-
+`define NPC_JR      2'b11 // 给jr指令使用
 
 // ALU control signal
 // `define ALU_NOP   3'b000  //无操作，ALU不执行任何算术或逻辑运算。
