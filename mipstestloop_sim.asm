@@ -10,7 +10,7 @@ main:   addi $2, $0, 5          # initialize $2 = 5     00      0       20020005
         and  $5, $3, $4         # $5 = (12 and 7) = 4   04      10      00642824
         add  $5, $5, $4         # $5 = 4 + 7 = 11       05      14      00a42820
         addi $5, $0, -3   # $5 = $0 + (-3)  
-        sra  $5, $5, 2
+        srav $5, $5, $2
         beq  $5, $7, label2     # shouldn't be taken    06      18      10a7000a
         slt  $4, $3, $4         # $4 = (12 < 7) = 0     07      1c      0064202a
         beq  $4, $0, label1     # should be taken       08      20      10800001

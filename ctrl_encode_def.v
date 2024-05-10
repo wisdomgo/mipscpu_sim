@@ -29,4 +29,3 @@
 `define ALU_LUI   4'b1010
 `define ALU_XOR   4'b1011
 `define ALU_SRA   4'b1100
-`define ALU_SRAV  4'b1101
