@@ -26,7 +26,7 @@ module alu(A, B, ALUOp, C, Zero);
           `ALU_SRL:  C = B >> A;                  // SRL/SRLI  右移
           `ALU_NOR:  C = ~(A | B);                   // NOR 
           `ALU_LUI:  C = B << 16;                    // LUI
-          
+          `ALU_XOR:  C = A ^ B;                      // XOR  异或
 
           default:   C = A;                          // Undefined
       endcase
