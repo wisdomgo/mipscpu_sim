@@ -37,9 +37,9 @@ module ctrl(Op, Funct, Zero,
    wire i_addu = rtype& Funct[5]&~Funct[4]&~Funct[3]&~Funct[2]&~Funct[1]& Funct[0]; // addu 100001
    wire i_subu = rtype& Funct[5]&~Funct[4]&~Funct[3]&~Funct[2]& Funct[1]& Funct[0]; // subu 100011
    wire i_sll  = rtype&~Funct[5]&~Funct[4]&~Funct[3]&~Funct[2]&~Funct[1]&~Funct[0]; // sll 000000
-   wire i_srl  = rtype&~Funct[5]&~Funct[4]&~Funct[3]&~Funct[2]&~Funct[1]& Funct[0]; // srl 000010
-   wire i_sllv = rtype&~Funct[5]&~Funct[4]&~Funct[3]&~Funct[2]& Funct[1]&~Funct[0]; // sllv 000100
-   wire i_srlv = rtype&~Funct[5]&~Funct[4]&~Funct[3]&~Funct[2]& Funct[1]& Funct[0]; // srlv 000110
+   wire i_srl  = rtype&~Funct[5]&~Funct[4]&~Funct[3]&~Funct[2]& Funct[1]&~Funct[0]; // srl 000010
+   wire i_sllv = rtype&~Funct[5]&~Funct[4]&~Funct[3]& Funct[2]&~Funct[1]&~Funct[0]; // sllv 000100
+   wire i_srlv = rtype&~Funct[5]&~Funct[4]&~Funct[3]& Funct[2]& Funct[1]&~Funct[0]; // srlv 000110
    wire i_nor  = rtype& Funct[5]&~Funct[4]&~Funct[3]& Funct[2]& Funct[1]& Funct[0]; // nor 100111
    wire i_jr   = rtype&~Funct[5]&~Funct[4]&~Funct[3]&~Funct[2]&~Funct[1]&~Funct[0]; // jr 001000
    wire i_jalr = rtype&~Funct[5]&~Funct[4]&~Funct[3]&~Funct[2]&~Funct[1]& Funct[0]; // jalr 001001
@@ -104,8 +104,8 @@ module ctrl(Op, Funct, Zero,
   // ALU_OR    3'b100
   // ALU_SLT   3'b101
   // ALU_SLTU  3'b110
-  assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_slti | i_andi;
-  assign ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu | i_sll | i_lui | i_andi;
-  assign ALUOp[2] = i_or | i_ori | i_slt | i_sltu | i_sll | i_slti;
-  assign ALUOp[3] = i_srl | i_srl | i_nor | i_lui;
+  assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_slti | i_andi | i_sllv;
+  assign ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu | i_sll | i_lui | i_andi | i_sllv;
+  assign ALUOp[2] = i_or | i_ori | i_slt | i_sltu | i_sll | i_slti | i_sllv;
+  assign ALUOp[3] = i_srl | i_srl | i_nor | i_lui | i_srlv;
 endmodule
