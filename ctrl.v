@@ -56,7 +56,7 @@ module ctrl(Op, Funct, Zero,
    wire i_beq  = ~Op[5]&~Op[4]&~Op[3]& Op[2]&~Op[1]&~Op[0]; // beq
    wire i_bne  = ~Op[5]&~Op[4]&~Op[3]& Op[2]&~Op[1]& Op[0]; // bne
    wire i_slti = ~Op[5]&~Op[4]& Op[3]&~Op[2]& Op[1]&~Op[0]; // slti 001010
-   wire i_lui  = ~Op[5]&~Op[4]& Op[3]&~Op[2]&~Op[1]& Op[0]; // lui 001111
+   wire i_lui  = ~Op[5]&~Op[4]& Op[3]& Op[2]& Op[1]& Op[0]; // lui 001111
    wire i_andi = ~Op[5]&~Op[4]& Op[3]&~Op[2]&~Op[1]& Op[0]; // andi 001100
    wire i_lb   =  Op[5]&~Op[4]&~Op[3]&~Op[2]& Op[1]& Op[0]; // lb 100000
    wire i_lh   =  Op[5]&~Op[4]&~Op[3]&~Op[2]& Op[1]& Op[0]; // lh 100001
