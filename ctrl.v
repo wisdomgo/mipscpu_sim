@@ -45,7 +45,7 @@ module ctrl(Op, Funct, Zero,
    wire i_jalr = rtype&~Funct[5]&~Funct[4]& Funct[3]&~Funct[2]&~Funct[1]& Funct[0]; // jalr 001001
    wire i_xor  = rtype& Funct[5]&~Funct[4]&~Funct[3]& Funct[2]& Funct[1]&~Funct[0]; // xor 100110
    wire i_sra  = rtype&~Funct[5]&~Funct[4]&~Funct[3]&~Funct[2]& Funct[1]& Funct[0]; // sra 000011
-   wire i_srav = rtype&~Funct[5]&~Funct[4]&~Funct[3]&~Funct[2]& Funct[1]& Funct[0]; // srav 000111
+   wire i_srav = rtype&~Funct[5]&~Funct[4]&~Funct[3]& Funct[2]& Funct[1]& Funct[0]; // srav 000111
   
   // i format
   // op(6) + rs(5) + rt(5) + constant or address(16)
@@ -79,7 +79,7 @@ module ctrl(Op, Funct, Zero,
   assign ALUSrc     = i_lw | i_sw | i_addi | i_ori | i_slti | i_lui | i_andi;   // ALU B is from instruction immediate
  //符号扩展
   assign EXTOp      = i_addi | i_lw | i_sw | i_slti | i_andi;           // signed extension
-  assign AregSel = i_sll | i_srl;
+  assign AregSel    = i_sll | i_srl | i_sra;
 
   // GPRSel_RD   1'b0
   // GPRSel_RT   1'b1
@@ -104,8 +104,8 @@ module ctrl(Op, Funct, Zero,
   // ALU_OR    3'b100
   // ALU_SLT   3'b101
   // ALU_SLTU  3'b110
-  assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_slti | i_andi | i_sllv | i_xor;
+  assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_slti | i_andi | i_sllv | i_xor | i_srav;
   assign ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu | i_sll | i_lui | i_andi | i_sllv | i_xor;
-  assign ALUOp[2] = i_or | i_ori | i_slt | i_sltu | i_sll | i_slti | i_sllv;
-  assign ALUOp[3] = i_srl | i_srl | i_nor | i_lui | i_srlv | i_xor;
+  assign ALUOp[2] = i_or | i_ori | i_slt | i_sltu | i_sll | i_slti | i_sllv | i_sra | i_srav;
+  assign ALUOp[3] = i_srl | i_srl | i_nor | i_lui | i_srlv | i_xor | i_sra | i_srav;
 endmodule
