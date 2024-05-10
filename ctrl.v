@@ -72,10 +72,10 @@ module ctrl(Op, Funct, Zero,
   // generate control signals
   //寄存器写信号
   assign RegWrite   = rtype | i_lw | i_addi | i_ori |i_jal | i_slti | i_lui | i_andi | i_jalr; // register write  
-  //似乎是把读写操作的寄存器信号写在了一起，评价为懒完了
+
   //数据写信号
   assign MemWrite   = i_sw;         //修改过，记得看看对不对 memory write
-  //alusrc信号，用于确定alu输入(?)
+  //alusrc信号
   assign ALUSrc     = i_lw | i_sw | i_addi | i_ori | i_slti | i_lui | i_andi;   // ALU B is from instruction immediate
  //暂时不知道是啥，闹麻了
   assign EXTOp      = i_addi | i_lw | i_sw | i_slti;           // signed extension
@@ -104,8 +104,8 @@ module ctrl(Op, Funct, Zero,
   // ALU_OR    3'b100
   // ALU_SLT   3'b101
   // ALU_SLTU  3'b110
-  assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor;
+  assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_slti;
   assign ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu | i_sll | i_lui;
-  assign ALUOp[2] = i_or | i_ori | i_slt | i_sltu | i_sll;
+  assign ALUOp[2] = i_or | i_ori | i_slt | i_sltu | i_sll | i_slti;
   assign ALUOp[3] = i_srl | i_srl | i_nor | i_lui;
 endmodule
