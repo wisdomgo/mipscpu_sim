@@ -74,11 +74,11 @@ module ctrl(Op, Funct, Zero,
   assign RegWrite   = rtype | i_lw | i_addi | i_ori |i_jal | i_slti | i_lui | i_andi | i_jalr | i_lb | i_lh | i_lbu | i_lhu; // register write  
 
   //数据写信号
-  assign MemWrite   = i_sw;        
+  assign MemWrite   = i_sw | i_sb | i_sh;        
   //alusrc信号
-  assign ALUSrc     = i_lw | i_sw | i_addi | i_ori | i_slti | i_lui | i_andi | i_lb | i_lh | i_lbu | i_lhu;   // ALU B is from instruction immediate
+  assign ALUSrc     = i_lw | i_sw | i_addi | i_ori | i_slti | i_lui | i_andi | i_lb | i_lh | i_lbu | i_lhu | i_sb | i_sh;   // ALU B is from instruction immediate
  //符号扩展
-  assign EXTOp      = i_addi | i_lw | i_sw | i_slti | i_andi | i_lb | i_lh;           // signed extension
+  assign EXTOp      = i_addi | i_lw | i_sw | i_slti | i_andi | i_lb | i_lh | i_sb | i_sh;           // signed extension
   
   assign AregSel    = i_sll | i_srl | i_sra; 
 
@@ -108,7 +108,7 @@ module ctrl(Op, Funct, Zero,
   // ALU_OR    3'b100
   // ALU_SLT   3'b101
   // ALU_SLTU  3'b110
-  assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_slti | i_andi | i_sllv | i_xor | | i_lb | i_lh | i_lbu | i_lhu;
+  assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_slti | i_andi | i_sllv | i_xor | | i_lb | i_lh | i_lbu | i_lhu | i_sb | i_sh;
   assign ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu | i_sll | i_lui | i_andi | i_sllv | i_xor;
   assign ALUOp[2] = i_or | i_ori | i_slt | i_sltu | i_sll | i_slti | i_sllv | i_sra | i_srav;
   assign ALUOp[3] = i_srl | i_srl | i_nor | i_lui | i_srlv | i_xor | i_sra | i_srav;

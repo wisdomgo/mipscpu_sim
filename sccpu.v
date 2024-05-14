@@ -19,8 +19,8 @@ module sccpu( clk, rst, instr, readdata, PC, MemWrite, aluout, writedata, reg_se
    wire [3:0]  ALUOp;       // ALU opertion
    wire [1:0]  NPCOp;       // next PC operation
 
-   wire  WDSel;             // (register) write data selection
-   wire  GPRSel;            // general purpose register selection
+   wire  [1:0] WDSel;             // (register) write data selection
+   wire  [1:0] GPRSel;            // general purpose register selection
 
    wire        AregSel;
    wire        ALUSrc;      // ALU source for A
