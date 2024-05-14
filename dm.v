@@ -24,7 +24,10 @@ module dm(clk, DMWr, addr, din, dout,memOp);
    always @(posedge clk) begin
       if (DMWr) begin
          case (memOp)
-            2'b00: begin  // 字节操作
+            2'b00: begin  // 字操作
+               dmem[addrByte[8:2]] <= din;  // 存储32位
+            end
+            2'b01: begin  // 字节操作
                case (addrByte[1:0])
                   2'b00: dmem[addrByte[8:2]][7:0]   <= din[7:0];   // 存储低8位
                   2'b01: dmem[addrByte[8:2]][15:8]  <= din[7:0];   // 存储第8-15位
@@ -32,7 +35,7 @@ module dm(clk, DMWr, addr, din, dout,memOp);
                   2'b11: dmem[addrByte[8:2]][31:24] <= din[7:0];   // 存储高8位
                endcase
             end
-            2'b01: begin  // 半字操作
+            2'b10: begin  // 半字操作
                if (addrByte[1] == 1'b0) begin
                   dmem[addrByte[8:2]][15:0] <= din[15:0];  // 存储低16位
                end 
@@ -40,7 +43,7 @@ module dm(clk, DMWr, addr, din, dout,memOp);
                   dmem[addrByte[8:2]][31:16] <= din[15:0]; // 存储高16位
                end
             end
-            2'b10: begin  // 字操作
+            2'b11: begin  // 字操作
                dmem[addrByte[8:2]] <= din;  // 存储32位
             end
          endcase

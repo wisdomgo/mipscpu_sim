@@ -22,7 +22,7 @@ module ctrl(Op, Funct, Zero,
 
   output  [1:0] GPRSel;   // general purpose register selection
   output  [1:0] WDSel;    // (register) write data selection
-  output       AregSel;
+  output        AregSel;
   //这些输出定义了控制信号，控制寄存器写入、内存写入、ALU操作、程序计数器操作等。GPRSel 和 WDSel 分别控制通用寄存器选择和数据写入选择。
   // r format
   //这行代码定义了一个信号 rtype，用于检测R类型的指令。~|Op 是 Op 所有位的 NOR 运算，如果 Op 为全0，则 rtype 为真，表示是R类型指令。
@@ -71,9 +71,9 @@ module ctrl(Op, Funct, Zero,
    wire i_jal  = ~Op[5]&~Op[4]&~Op[3]&~Op[2]& Op[1]& Op[0];  // jal
   // generate control signals
   //寄存器写信号
-  assign RegWrite   = rtype | i_lw | i_addi | i_ori |i_jal | i_slti | i_lui | i_andi | i_jalr | i_lb | i_lh | i_lbu | i_lhu; // register write  
+  assign RegWrite   = rtype | i_lw | i_addi | i_ori | i_jal | i_slti | i_lui | i_andi | i_jalr | i_lb | i_lh | i_lbu | i_lhu; // register write  
 
-  //数据写信号
+  //内存写信号
   assign MemWrite   = i_sw | i_sb | i_sh;        
   //alusrc信号
   assign ALUSrc     = i_lw | i_sw | i_addi | i_ori | i_slti | i_lui | i_andi | i_lb | i_lh | i_lbu | i_lhu | i_sb | i_sh;   // ALU B is from instruction immediate
@@ -83,8 +83,10 @@ module ctrl(Op, Funct, Zero,
   assign AregSel    = i_sll | i_srl | i_sra; 
 
 //选择字节、半字、字
- assign memOp[0] = i_lh | i_sh | i_lhu;
- assign memOp[1] = i_lw | i_sw;
+//i_lh i_sh i_lhu
+//i_lw i_sw
+ assign memOp[0] = i_lb | i_lbu | i_sb | i_lw | i_sw;
+ assign memOp[1] = i_lh | i_sh | i_lhu;
   // GPRSel_RD   1'b0
   // GPRSel_RT   1'b1
   assign GPRSel[0] = i_lw | i_addi | i_ori | i_slti | i_lui | i_andi | i_lb | i_lh | i_lbu | i_lhu;
