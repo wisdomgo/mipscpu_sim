@@ -5,7 +5,7 @@
 module ctrl(Op, Funct, Zero, 
             RegWrite, MemWrite,
             EXTOp, ALUOp, NPCOp, 
-            ALUSrc, GPRSel, WDSel, AregSel
+            ALUSrc, GPRSel, WDSel, AregSel, memOp
             );
   /*定义了一个名为 ctrl 的模块，这是一个控制单元模块，它生成对应于指令的控制信号。输入包括操作码 Op、功能码 Funct 和零标志 Zero，输出包括各种控制信号。*/
    input  [5:0] Op;       // opcode
@@ -18,7 +18,7 @@ module ctrl(Op, Funct, Zero,
    output [3:0] ALUOp;    // ALU opertion
    output [1:0] NPCOp;    // next pc operation
    output       ALUSrc;   // ALU source for A
-  
+   output [1:0] memOp;
 
   output  [1:0] GPRSel;   // general purpose register selection
   output  [1:0] WDSel;    // (register) write data selection
@@ -58,12 +58,12 @@ module ctrl(Op, Funct, Zero,
    wire i_slti = ~Op[5]&~Op[4]& Op[3]&~Op[2]& Op[1]&~Op[0]; // slti 001010
    wire i_lui  = ~Op[5]&~Op[4]& Op[3]& Op[2]& Op[1]& Op[0]; // lui 001111
    wire i_andi = ~Op[5]&~Op[4]& Op[3]& Op[2]&~Op[1]&~Op[0]; // andi 001100
-   wire i_lb   =  Op[5]&~Op[4]&~Op[3]&~Op[2]& Op[1]& Op[0]; // lb 100000
-   wire i_lh   =  Op[5]&~Op[4]&~Op[3]&~Op[2]& Op[1]& Op[0]; // lh 100001
-   wire i_lbu  =  Op[5]&~Op[4]&~Op[3]&~Op[2]& Op[1]& Op[0]; // lbu 100100
-   wire i_lhu  =  Op[5]&~Op[4]&~Op[3]&~Op[2]& Op[1]& Op[0]; // lhu 100101
-   wire i_sb   =  Op[5]&~Op[4]& Op[3]&~Op[2]& Op[1]& Op[0]; // sb 101000
-   wire i_sh   =  Op[5]&~Op[4]& Op[3]&~Op[2]& Op[1]& Op[0]; // sh 101001
+   wire i_lb   =  Op[5]&~Op[4]&~Op[3]&~Op[2]&~Op[1]&~Op[0]; // lb 100000
+   wire i_lh   =  Op[5]&~Op[4]&~Op[3]&~Op[2]&~Op[1]& Op[0]; // lh 100001
+   wire i_lbu  =  Op[5]&~Op[4]&~Op[3]& Op[2]&~Op[1]&~Op[0]; // lbu 100100
+   wire i_lhu  =  Op[5]&~Op[4]&~Op[3]& Op[2]&~Op[1]& Op[0]; // lhu 100101
+   wire i_sb   =  Op[5]&~Op[4]& Op[3]&~Op[2]&~Op[1]&~Op[0]; // sb 101000
+   wire i_sh   =  Op[5]&~Op[4]& Op[3]&~Op[2]&~Op[1]& Op[0]; // sh 101001
 
   // j format
   // op(6) + address(26
@@ -71,25 +71,28 @@ module ctrl(Op, Funct, Zero,
    wire i_jal  = ~Op[5]&~Op[4]&~Op[3]&~Op[2]& Op[1]& Op[0];  // jal
   // generate control signals
   //寄存器写信号
-  assign RegWrite   = rtype | i_lw | i_addi | i_ori |i_jal | i_slti | i_lui | i_andi | i_jalr; // register write  
+  assign RegWrite   = rtype | i_lw | i_addi | i_ori |i_jal | i_slti | i_lui | i_andi | i_jalr | | i_lb |i_lh; // register write  
 
   //数据写信号
-  assign MemWrite   = i_sw;         //修改过，记得看看对不对 memory write
+  assign MemWrite   = i_sw;        
   //alusrc信号
-  assign ALUSrc     = i_lw | i_sw | i_addi | i_ori | i_slti | i_lui | i_andi;   // ALU B is from instruction immediate
+  assign ALUSrc     = i_lw | i_sw | i_addi | i_ori | i_slti | i_lui | i_andi | i_lb | i_lh;   // ALU B is from instruction immediate
  //符号扩展
-  assign EXTOp      = i_addi | i_lw | i_sw | i_slti | i_andi;           // signed extension
+  assign EXTOp      = i_addi | i_lw | i_sw | i_slti | i_andi | i_lb | i_lh;           // signed extension
   assign AregSel    = i_sll | i_srl | i_sra;
 
+//选择字节、半字、字
+ assign memOp[0] = i_lh | i_sh;
+ assign memOp[1] = i_lw | i_sw;
   // GPRSel_RD   1'b0
   // GPRSel_RT   1'b1
-  assign GPRSel[0] = i_lw | i_addi | i_ori | i_slti | i_lui | i_andi;
+  assign GPRSel[0] = i_lw | i_addi | i_ori | i_slti | i_lui | i_andi | | i_lb | i_lh;
   assign GPRSel[1] = i_jal | i_jalr;
   
   // WDSel_FromALU 2'b00
   // WDSel_FromMEM 2'b01
   // WDSel_FromPC  2'b10 
-  assign WDSel[0] = i_lw;  
+  assign WDSel[0] = i_lw | i_lb | i_lh;  
   assign WDSel[1] = i_jal | i_jalr;
   // NPC_PLUS4   2'b00
   // NPC_BRANCH  2'b01
@@ -104,7 +107,7 @@ module ctrl(Op, Funct, Zero,
   // ALU_OR    3'b100
   // ALU_SLT   3'b101
   // ALU_SLTU  3'b110
-  assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_slti | i_andi | i_sllv | i_xor;
+  assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_slti | i_andi | i_sllv | i_xor | |i_lb | i_lh;
   assign ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu | i_sll | i_lui | i_andi | i_sllv | i_xor;
   assign ALUOp[2] = i_or | i_ori | i_slt | i_sltu | i_sll | i_slti | i_sllv | i_sra | i_srav;
   assign ALUOp[3] = i_srl | i_srl | i_nor | i_lui | i_srlv | i_xor | i_sra | i_srav;
