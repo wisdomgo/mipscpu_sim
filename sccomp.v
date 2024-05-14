@@ -30,7 +30,7 @@ module sccomp(clk, rstn, reg_sel, reg_data);
    dm    U_DM(
          .clk(clk),           // input:  cpu clock
          .DMWr(MemWrite),     // input:  ram write
-         .addr(dm_addr[8:2]), // input:  ram address
+         .addr(dm_addr), // input:  ram address
          .din(dm_din),        // input:  data to ram
          .dout(dm_dout),       // output: data from ram
          .memOp(memOp)
