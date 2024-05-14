@@ -23,6 +23,7 @@ module dm(clk, DMWr, addr, din, dout,memOp);
    
    always @(posedge clk) begin
       if (DMWr) begin
+        $display("dmem[0x%8X] = 0x%8X,1", addrByte, dmem[addrByte]);
          case (memOp)
             2'b00: begin  // 字操作
                dmem[addrByte[8:2]] <= din;  // 存储32位
@@ -47,7 +48,7 @@ module dm(clk, DMWr, addr, din, dout,memOp);
                dmem[addrByte[8:2]] <= din;  // 存储32位
             end
          endcase
-         $display("dmem[0x%8X] = 0x%8X,", addrByte, din);
+         $display("dmem[0x%8X] = 0x%8X,2", addrByte, dmem[addrByte]);
       end
    end
    

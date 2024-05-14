@@ -86,7 +86,7 @@ module ctrl(Op, Funct, Zero,
 //i_lh i_sh i_lhu
 //i_lw i_sw
  assign memOp[0] = i_lb | i_lbu | i_sb | i_lw | i_sw;
- assign memOp[1] = i_lh | i_sh | i_lhu;
+ assign memOp[1] = i_lh | i_sh | i_lhu | i_lw | i_sw;
   // GPRSel_RD   1'b0
   // GPRSel_RT   1'b1
   assign GPRSel[0] = i_lw | i_addi | i_ori | i_slti | i_lui | i_andi | i_lb | i_lh | i_lbu | i_lhu;

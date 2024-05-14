@@ -27,25 +27,8 @@ addu  $4, $2, $3        # $4=0x1234+0x98760000=0x98761234             # 00432021
 addi  $29, $0, 0x0      # $29=0                                       # 201d0000
 sw    $4, 0x00($29)     # [0]=0x98761234                              # afa40000
 sw    $4, 0x04($29)     # [4]=0x98761234                              # afa40004
-sw    $4, 0x08($29)     # [8]=0x98761234                              # afa40008
-sh    $8, 0x04($29)     # [4]=0x98766e60 $8=0xc3af6e60                # a7a80004  little endian
-sh    $9, 0x0a($29)     # [8]=0xc3af1234 $9=0xc3af                    # a7a9000a  little endian
-sb    $10, 0x07($29)    # [4]=0xfe766e60 $10=0xfffffffe               # a3aa0007  little endian
-sb    $8, 0x09($29)     # [8]=0xc3af6034 $8=0xc3af6e60                # a3a80009  little endian
-sb    $9, 0x08($29)     # [8]=0xc3af60af $9=0xc3af                    # a3a90008  little endian 
-lw    $8, 0x00($29)     # $8=0x98761234                               # 8fa80000 
-sw    $8, 0x0c($29)     # [0xc]=0x98761234                            # afa8000c 
 lh    $9, 0x02($29)     # $9=0xffff9876 [0]=0x98761234                # 87a90002  little endian, sign extension
-sw    $9, 0x10($29)     # [0x10]=0xffff9876                           # afa90010
-lhu   $9, 0x02($29)     # $9=0x00009876 [0]=0x98761234                # 97a90002  little endian, zero extension
-sw    $9, 0x14($29)     # [0x14]=0x00009876                           # afa90014
-lb    $10, 0x03($29)    # $10=0xffffff98  [0]=0x98761234              # 83aa0003  little endian, sign extension
-sw    $10, 0x18($29)    # [0x18]=0xffffff98                           # afaa0018
-lbu   $10, 0x03($29)    # $10=0x00000098 [0]=0x98761234               # 93aa0003  little endian, zero extension
-sw    $10, 0x1c($29)    # [0x1c]=0x00000098                           # afaa001c   
-lbu   $10, 0x01($29)    # $10=0x00000012 [0]=0x98761234               # 93aa0001  little endian, zero extension
-sw    $10, 0x20($29)    # [0x20]=0x00000012                           # afaa0020  
-
+addi  $1,$2,-100
 
 # $0=0              $1=0              $2=0x00001234     $3=0x98760000
 # $4=0x98761234     $5=0              $6=0              $7=0

@@ -19,6 +19,9 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	im
 
+} {} {}} D:/class/mipscpu/mipscpu_sim/ctrl_encode_def.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/ctrl_encode_def.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+
 } {} {}} D:/class/mipscpu/mipscpu_sim/dm.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/dm.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module dm
@@ -39,6 +42,13 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 
 Top level modules:
 	EXT
+
+} {} {}} D:/class/mipscpu/mipscpu_sim/alu.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/alu.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module alu
+
+Top level modules:
+	alu
 
 } {} {}} D:/class/mipscpu/mipscpu_sim/mux.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/mux.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
