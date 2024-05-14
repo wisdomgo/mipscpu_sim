@@ -28,6 +28,9 @@ module alu(A, B, ALUOp, C, Zero);
           `ALU_LUI:  C = B << 16;                    // LUI
           `ALU_XOR:  C = A ^ B;                      // XOR  异或
           `ALU_SRA:  C = ($signed(B)) >>> A; // SRA/SRAI  算术右移
+          `ALU_SLLV: C = B << A[4:0];
+          `ALU_SRLV: C = B >> A[4:0];
+          `ALU_SRAV: C = ($signed(B)) >>> A[4:0];
           default:   C = A;                          // Undefined
       endcase
    end // end always

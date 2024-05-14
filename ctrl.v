@@ -103,15 +103,9 @@ module ctrl(Op, Funct, Zero,
   assign NPCOp[0] = (i_beq & Zero) | (i_bne & ~Zero) | i_jr | i_jalr;
   assign NPCOp[1] = i_j | i_jal | i_jr | i_jalr;
   
-  // ALU_NOP   3'b000
-  // ALU_ADD   3'b001
-  // ALU_SUB   3'b010
-  // ALU_AND   3'b011
-  // ALU_OR    3'b100
-  // ALU_SLT   3'b101
-  // ALU_SLTU  3'b110
-  assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_slti | i_andi | i_sllv | i_xor | | i_lb | i_lh | i_lbu | i_lhu | i_sb | i_sh;
-  assign ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu | i_sll | i_lui | i_andi | i_sllv | i_xor;
-  assign ALUOp[2] = i_or | i_ori | i_slt | i_sltu | i_sll | i_slti | i_sllv | i_sra | i_srav;
-  assign ALUOp[3] = i_srl | i_srl | i_nor | i_lui | i_srlv | i_xor | i_sra | i_srav;
+  
+  assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_slti | i_sllv | i_srav | i_andi | i_xor | | i_lb | i_lh | i_lbu | i_lhu | i_sb | i_sh;
+  assign ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu | i_sll | i_lui | i_andi | i_xor | i_srlv | i_srav;
+  assign ALUOp[2] = i_or | i_ori | i_slt | i_sltu | i_sll | i_slti | i_sra | i_srav | i_sllv | i_srlv;
+  assign ALUOp[3] = i_srl | i_srl | i_nor | i_lui | i_srlv | i_xor | i_sra | i_srav | i_sllv | i_srlv;
 endmodule
