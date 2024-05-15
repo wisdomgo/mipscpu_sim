@@ -76,7 +76,8 @@ module sccpu( clk, rst, instr, readdata, PC, MemWrite, aluout, writedata, reg_se
       .RD1(RD1), .RD2(writedata),
       .reg_sel(reg_sel),
       .reg_data(reg_data),
-      .memOp(memOp)
+      .memOp(memOp),
+      .addr(aluout[1:0])
    );
    
    // mux for register data to write
