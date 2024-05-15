@@ -29,13 +29,6 @@ Top level modules:
 } {} {}} D:/class/mipscpu/mipscpu_sim/ctrl_encode_def.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/ctrl_encode_def.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 
-} {} {}} D:/class/mipscpu/mipscpu_sim/dm.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/dm.v
-Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module dm
-
-Top level modules:
-	dm
-
 } {} {}} D:/class/mipscpu/mipscpu_sim/NPC.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/NPC.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module NPC
@@ -83,5 +76,12 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 
 Top level modules:
 	sccpu
+
+} {} {}} D:/class/mipscpu/mipscpu_sim/RF.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/RF.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module RF
+
+Top level modules:
+	RF
 
 } {} {}}

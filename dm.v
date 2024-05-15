@@ -14,7 +14,7 @@ module dm(clk, DMWr, addr, din, dout,memOp);
    input  [1:0]   memOp;    //内存操作类型: 00 字节 01 半字 10 字
    
    reg [31:0] dmem[127:0];
-    // 初始化dmem数组 方面仿真结果与mars做对比
+    // 初始化dmem数组 方便仿真结果与mars做对比
    integer i;
    initial begin
    for (i = 0; i < 128; i = i + 1) begin
@@ -47,7 +47,7 @@ module dm(clk, DMWr, addr, din, dout,memOp);
                dmem[addr[8:2]] <= din;  // 存储32位
             end
          endcase
-         $display("0x%8x = 0x%8X", addr[8:0], dmem[addr[8:2]]);
+         //$display("0x%8x = 0x%8X", addr[8:0], dmem[addr[8:2]]); 直接看memory list更好
       end
    end
    assign dout = dmem[addr[8:2]];
