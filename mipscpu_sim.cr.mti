@@ -1,11 +1,4 @@
-D:/class/mipscpu/mipscpu_sim/sccomp_tb.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/sccomp_tb.v
-Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module sccomp_tb
-
-Top level modules:
-	sccomp_tb
-
-} {} {}} D:/class/mipscpu/mipscpu_sim/sccomp.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/sccomp.v
+D:/class/mipscpu/mipscpu_sim/sccomp.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/sccomp.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module sccomp
 
@@ -77,11 +70,11 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	PC
 
-} {} {}} D:/class/mipscpu/mipscpu_sim/sccpu.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/sccpu.v
+} {} {}} D:/class/mipscpu/mipscpu_sim/RF.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/RF.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module sccpu
+-- Compiling module RF
 
 Top level modules:
-	sccpu
+	RF
 
 } {} {}}
