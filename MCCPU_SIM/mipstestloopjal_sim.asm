@@ -7,6 +7,7 @@ main:   addi $2, $0, 5          # initialize $2 = 5     00      0       20020005
         addi $3, $0, 12         # initialize $3 = 12    01      4       2003000c
         addi $7, $3, -9         # initialize $7 = 3     02      8       2067fff7
         or   $4, $7, $2         # $4 = (3 or 5) = 7     03      c       00e22025
+        nor  $5, $3, $7         # $5 = (12 nor 3) = 4   04      10      00642827   
         and  $5, $3, $4         # $5 = (12 and 7) = 4   04      10      00642824
         add  $5, $5, $4         # $5 = 4 + 7 = 11       05      14      00a42820
         beq  $5, $7, label2     # shouldn't be taken    06      18      10a7000a

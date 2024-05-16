@@ -18,14 +18,14 @@ module mccpu( clk, rst, instr, readdata, PC, MemWrite, adr, writedata, reg_sel, 
    wire        PCWrite;     // control signal for PC write
    wire        IRWrite;     // control signal for IR write
    wire        EXTOp;       // control signal to signed extension
-   wire [2:0]  ALUOp;       // ALU opertion
+   wire [3:0]  ALUOp;       // ALU opertion
    wire [1:0]  PCSource;    // next PC operation
    wire        IorD;         // memory access for instruction or data
 
    wire [1:0]  WDSel;       // (register) write data selection
    wire [1:0]  GPRSel;      // general purpose register selection
    
-   wire        ALUSrcA;     // ALU source for A
+   wire [1:0]  ALUSrcA;     // ALU source for A
    wire [1:0]  ALUSrcB;     // ALU source for B
    wire        Zero;        // ALU ouput zero
 
@@ -51,7 +51,8 @@ module mccpu( clk, rst, instr, readdata, PC, MemWrite, adr, writedata, reg_sel, 
    wire [31:0] ALUB;        // ALU B
    wire [31:0] data;        // data
    wire [31:0] NPC;         // NPC
-   
+   wire [31:0] shamt;       //计算位移量
+
    assign Op = instr[31:26];  // instruction
    assign Funct = instr[5:0]; // funct
    assign rs = instr[25:21];  // rs
@@ -59,7 +60,8 @@ module mccpu( clk, rst, instr, readdata, PC, MemWrite, adr, writedata, reg_sel, 
    assign rd = instr[15:11];  // rd
    assign Imm16 = instr[15:0];// 16-bit immediate
    assign IMM = instr[25:0];  // 26-bit immediate
-   
+   assign shamt = {27'b0,instr[10:6]}; // shift amount
+
    // instantiation of control unit
    ctrl U_CTRL ( 
        .clk(clk), .rst(rst), .Zero(Zero), .Op(Op), .Funct(Funct),
@@ -70,7 +72,7 @@ module mccpu( clk, rst, instr, readdata, PC, MemWrite, adr, writedata, reg_sel, 
        .GPRSel(GPRSel), .WDSel(WDSel), .IorD(IorD));
    
    // instantiation of PC
-   flopenr #(32) U_PC (
+   flopenr #(32) U_PC (  //程序计数器
       .clk(clk), .rst(rst), .en(PCWrite), .d(NPC), .q(PC)
    );
    
@@ -80,12 +82,12 @@ module mccpu( clk, rst, instr, readdata, PC, MemWrite, adr, writedata, reg_sel, 
       .s(PCSource), .y(NPC)
    );
    
-   mux2 #(32) U_MUX_ADR (
+   mux2 #(32) U_MUX_ADR (  //根据IorD选择内存访问的地址是指令还是数据
       .d0(PC), .d1(aluout), .s(IorD), .y(adr)
    ); 
    
    // instantiation of IR
-   flopenr #(32) U_IR (
+   flopenr #(32) U_IR (   //指令寄存器
       .clk(clk), .rst(rst), .en(IRWrite), .d(readdata), .q(instr)
    );
 
@@ -107,8 +109,8 @@ module mccpu( clk, rst, instr, readdata, PC, MemWrite, adr, writedata, reg_sel, 
    flopr  #(32) U_BR(clk, rst, RD2, B);//B register
 
    // mux for ALU A
-   mux2 #(32) U_MUX_ALU_A (
-      .d0(PC), .d1(A), .s(ALUSrcA), .y(ALUA)
+   mux4 #(32) U_MUX_ALU_A (
+      .d0(PC), .d1(A), .d2(shamt), .d3(32'b0), .s(ALUSrcA), .y(ALUA)
    ); 
    
    // mux for signed extension or zero extension

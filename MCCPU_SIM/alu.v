@@ -3,7 +3,7 @@
 module alu(A, B, ALUOp, C, Zero);
            
    input  signed [31:0] A, B;
-   input         [2:0]  ALUOp;
+   input         [3:0]  ALUOp;
    output signed [31:0] C;
    output Zero;
    
@@ -19,6 +19,12 @@ module alu(A, B, ALUOp, C, Zero);
           `ALU_OR:   C = A | B;                      // OR/ORI
           `ALU_SLT:  C = (A < B) ? 32'd1 : 32'd0;    // SLT/SLTI
           `ALU_SLTU: C = ({1'b0, A} < {1'b0, B}) ? 32'd1 : 32'd0;
+          `ALU_SLL:  C = B << A;                  // SLL/SLLI 左移
+          `ALU_SRL:  C = B >> A;                  // SRL/SRLI  右移
+          `ALU_NOR:  C = ~(A | B);                   // NOR 
+          `ALU_LUI:  C = B << 16;                    // LUI
+          `ALU_SLLV: C = B << A[4:0];
+          `ALU_SRLV: C = B >> A[4:0];
           default:   C = A;                          // Undefined
       endcase
    end // end always
