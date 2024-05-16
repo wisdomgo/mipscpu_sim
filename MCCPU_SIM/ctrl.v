@@ -156,7 +156,7 @@ module ctrl(clk, rst, Zero, Op, Funct,
               nextstate = swb;
            end
            else begin
-             if (i_addi || i_ori)
+             if (i_addi | i_ori | i_lui)
                ALUSrcB = 2'b10; // select immediate
              if (i_ori)
                EXTOp = 0; // zero extension
@@ -177,7 +177,7 @@ module ctrl(clk, rst, Zero, Op, Funct,
          swb: begin    //写回
            if (i_lw)
              WDSel = 2'b01;     // WDSel_FromMEM 2'b01
-           if (i_lw | i_addi | i_ori) begin
+           if (i_lw | i_addi | i_ori | i_lui) begin
              GPRSel = 2'b01;    // GPRSel_RT     2'b01
            end
            RegWrite = 1;
