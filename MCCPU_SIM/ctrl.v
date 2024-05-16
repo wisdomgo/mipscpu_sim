@@ -103,7 +103,7 @@ module ctrl(clk, rst, Zero, Op, Funct,
      ALUOp    = 4'b0001;      // ALU_ADD       3'b001
      GPRSel   = 2'b00;       // GPRSel_RD     2'b00
      WDSel    = 2'b00;       // WDSel_FromALU 2'b00
-     PCSource = 2'b00;       // PC + 4 (ALU)
+     PCSource = 3'b000;       // PC + 4 (ALU)
      IorD     = 0;           // 0-memory access for instruction
 
      case (state)
@@ -129,6 +129,19 @@ module ctrl(clk, rst, Zero, Op, Funct,
              GPRSel = 2'b10;   // GPRSel_31     2'b10
              nextstate = sif;
            end 
+           else if (i_jr) begin
+             PCSource = 2'b11;
+             PCWrite = 1;
+             nextstate = sif;
+           end
+           else if(i_jalr) begin
+             PCSource = 2'b11;
+             PCWrite = 1;
+             RegWrite = 1;
+             WDSel = 2'b10;
+             GPRSel = 2'b10;
+             nextstate = sif;
+           end
            else begin
              ALUSrcA = 0;       // PC
              ALUSrcB = 2'b11;   // branch offset
@@ -142,7 +155,7 @@ module ctrl(clk, rst, Zero, Op, Funct,
            ALUOp[2] = i_or | i_ori | i_slt | i_sltu | i_sll | i_srlv | i_slti;
            ALUOp[3] = i_srl | i_nor | i_lui | i_sllv | i_srlv;
            if (i_beq || i_bne) begin
-             PCSource = 2'b01; // ALUout, branch address
+             PCSource = 3'b001; // ALUout, branch address
              PCWrite = (i_beq & Zero) | (i_bne & ~Zero);
              nextstate = sif;
            end 

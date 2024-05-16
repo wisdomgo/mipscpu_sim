@@ -78,7 +78,7 @@ module mccpu( clk, rst, instr, readdata, PC, MemWrite, adr, writedata, reg_sel, 
    
    // mux for PC source
    mux4 #(32) U_MUX4_PC (
-      .d0(aluresult), .d1(aluout), .d2({PC[31:28], IMM, 2'b00}), .d3(32'b0), 
+      .d0(aluresult), .d1(aluout), .d2({PC[31:28], IMM, 2'b00}), .d3(RD1), 
       .s(PCSource), .y(NPC)
    );
    
