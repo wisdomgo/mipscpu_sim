@@ -138,12 +138,12 @@ module ctrl(clk, rst, Zero, Op, Funct,
          
          sexe: begin          //EXE 指令执行
            ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_sllv | i_slti;
-           ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu | i_sll | i_lui | i_sllv;
+           ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu | i_sll | i_lui | i_sllv | i_bne;
            ALUOp[2] = i_or | i_ori | i_slt | i_sltu | i_sll | i_srlv | i_slti;
            ALUOp[3] = i_srl | i_nor | i_lui | i_sllv | i_srlv;
-           if (i_beq) begin
+           if (i_beq || i_bne) begin
              PCSource = 2'b01; // ALUout, branch address
-             PCWrite = i_beq & Zero;
+             PCWrite = (i_beq & Zero) | (i_bne & ~Zero);
              nextstate = sif;
            end 
            else if (i_lw || i_sw) begin
