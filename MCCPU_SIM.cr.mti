@@ -1,0 +1,101 @@
+D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mccomp.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mccomp.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module mccomp
+
+Top level modules:
+	mccomp
+
+} {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/ctrl_encode_def.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/ctrl_encode_def.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+
+} {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mccpu.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mccpu.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module mccpu
+
+Top level modules:
+	mccpu
+
+} {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/RF.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/RF.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module RF
+
+Top level modules:
+	RF
+
+} {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/EXT.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/EXT.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module EXT
+
+Top level modules:
+	EXT
+
+} {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v {0 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+** Error: D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v(1): Cannot find `include file "ctrl_encode_def.v" in directories:
+    C:/modelsim/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/modelsim/uvm-1.1b/../verilog_src/uvm-1.1b/src
+-- Compiling module alu
+** Error: D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v(15): (vlog-2163) Macro `ALU_NOP is undefined.
+
+** Error: D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v(15): near ":": syntax error, unexpected ':'
+** Error: D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v(16): (vlog-2163) Macro `ALU_ADD is undefined.
+
+** Error: D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v(17): (vlog-2163) Macro `ALU_SUB is undefined.
+
+** Error: D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v(18): (vlog-2163) Macro `ALU_AND is undefined.
+
+** Error: D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v(19): (vlog-2163) Macro `ALU_OR is undefined.
+
+** Error: D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v(20): (vlog-2163) Macro `ALU_SLT is undefined.
+
+** Error: D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v(21): (vlog-2163) Macro `ALU_SLTU is undefined.
+
+
+} {3.0 4.0 6.0 7.0 8.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mux.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mux.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module mux2
+-- Compiling module mux4
+-- Compiling module mux8
+-- Compiling module mux16
+
+Top level modules:
+	mux2
+	mux4
+	mux8
+	mux16
+
+} {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/flopr.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/flopr.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module flopr
+
+Top level modules:
+	flopr
+
+} {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mccomp_tb.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mccomp_tb.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module mccomp_tb
+
+Top level modules:
+	mccomp_tb
+
+} {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/ctrl.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/ctrl.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module ctrl
+
+Top level modules:
+	ctrl
+
+} {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/flopenr.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/flopenr.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module flopenr
+
+Top level modules:
+	flopenr
+
+} {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/dm.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/dm.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module dm
+
+Top level modules:
+	dm
+
+} {} {}}
