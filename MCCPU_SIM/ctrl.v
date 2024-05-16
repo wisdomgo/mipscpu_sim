@@ -150,7 +150,7 @@ module ctrl(clk, rst, Zero, Op, Funct,
              ALUSrcB = 2'b10; // select offset
              nextstate = smem;
            end 
-           else if (i_sll | i_srl) begin
+           else if (i_sll | i_srl | i_srl) begin
               ALUSrcA = 2'b10;
               ALUSrcB = 2'b00;
               nextstate = swb;
