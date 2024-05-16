@@ -5,6 +5,13 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	mccomp
 
+} {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mccpu.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mccpu.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module mccpu
+
+Top level modules:
+	mccpu
+
 } {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/RF.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/RF.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module RF
@@ -49,12 +56,12 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	flopr
 
-} {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mccomp_tb.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mccomp_tb.v
+} {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/ctrl.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/ctrl.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module mccomp_tb
+-- Compiling module ctrl
 
 Top level modules:
-	mccomp_tb
+	ctrl
 
 } {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/flopenr.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/flopenr.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
