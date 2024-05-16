@@ -5,7 +5,7 @@
 #       Assembly                  Description           Instr   Address Machine
 main:   lui  $3, 0x9876        # $3=0x98760000                               # 3c039876
         slti $3, $3, 10
-        bne  $1, $3, label1     # should be taken       00      0       10200001
+        andi $3, $3, 0x1146
         addi $3, $0, 12         # initialize $3 = 12    01      4       2003000c
         addi $7, $3, -9         # initialize $7 = 3     02      8       2067fff7
         or   $4, $7, $2         # $4 = (3 or 5) = 7     03      c       00e22025

@@ -137,8 +137,8 @@ module ctrl(clk, rst, Zero, Op, Funct,
          end
          
          sexe: begin          //EXE 指令执行
-           ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_sllv | i_slti;
-           ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu | i_sll | i_lui | i_sllv | i_bne;
+           ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll | i_nor | i_sllv | i_slti | i_andi;
+           ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu | i_sll | i_lui | i_sllv | i_bne | i_andi;
            ALUOp[2] = i_or | i_ori | i_slt | i_sltu | i_sll | i_srlv | i_slti;
            ALUOp[3] = i_srl | i_nor | i_lui | i_sllv | i_srlv;
            if (i_beq || i_bne) begin
@@ -156,10 +156,10 @@ module ctrl(clk, rst, Zero, Op, Funct,
               nextstate = swb;
            end
            else begin
-             if (i_addi | i_ori | i_lui | i_slti)
+             if (i_addi | i_ori | i_lui | i_slti | i_andi)
                ALUSrcB = 2'b10; // select immediate
-             if (i_ori)
-               EXTOp = 0; // zero extension
+             if (i_ori | i_andi)
+               EXTOp = 0; // zero extension 零扩展
              nextstate = swb;
            end
          end
@@ -177,7 +177,7 @@ module ctrl(clk, rst, Zero, Op, Funct,
          swb: begin    //写回
            if (i_lw)
              WDSel = 2'b01;     // WDSel_FromMEM 2'b01
-           if (i_lw | i_addi | i_ori | i_lui | i_slti) begin
+           if (i_lw | i_addi | i_ori | i_lui | i_slti | i_andi) begin
              GPRSel = 2'b01;    // GPRSel_RT     2'b01
            end
            RegWrite = 1;
