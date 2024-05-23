@@ -29,19 +29,6 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	EXT
 
-} {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mux.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mux.v
-Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module mux2
--- Compiling module mux4
--- Compiling module mux8
--- Compiling module mux16
-
-Top level modules:
-	mux2
-	mux4
-	mux8
-	mux16
-
 } {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module alu
@@ -55,6 +42,13 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 
 Top level modules:
 	flopr
+
+} {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mccomp_tb.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/mccomp_tb.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module mccomp_tb
+
+Top level modules:
+	mccomp_tb
 
 } {} {}} D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/ctrl.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/MCCPU_SIM/ctrl.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012

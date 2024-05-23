@@ -33,7 +33,7 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	dm
 
-} {} {}} D:/class/mipscpu/mipscpu_sim/SCCPU_SIM/sccomp_tb.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/SCCPU_SIM/sccomp_tb.v
+} {} {}} D:/class/mipscpu/mipscpu_sim/SCCPU_SIM/sccomp_tb.v {1 {vlog -work work -vopt {D:\class\mipscpu\mipscpu_sim\SCCPU_SIM\sccomp_tb.v}
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module sccomp_tb
 
@@ -71,6 +71,13 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	NPC
 
+} {} {}} D:/class/mipscpu/mipscpu_sim/SCCPU_SIM/alu.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/SCCPU_SIM/alu.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module alu
+
+Top level modules:
+	alu
+
 } {} {}} D:/class/mipscpu/mipscpu_sim/SCCPU_SIM/mux.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/SCCPU_SIM/mux.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module mux2
@@ -83,12 +90,5 @@ Top level modules:
 	mux4
 	mux8
 	mux16
-
-} {} {}} D:/class/mipscpu/mipscpu_sim/SCCPU_SIM/alu.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/SCCPU_SIM/alu.v
-Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module alu
-
-Top level modules:
-	alu
 
 } {} {}}

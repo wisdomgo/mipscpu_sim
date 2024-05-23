@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1716468012">
+  <File Type="PWROPT-DCP" Name="MCCPUSOC_Top_pwropt.dcp"/>
+  <File Type="ROUTE-PWR" Name="MCCPUSOC_Top_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="MCCPUSOC_Top.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="MCCPUSOC_Top_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="MCCPUSOC_Top_reports.tcl"/>
+  <File Type="BG-DRC" Name="MCCPUSOC_Top.drc"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="MCCPUSOC_Top_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="MCCPUSOC_Top_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="MCCPUSOC_Top.hwdef"/>
+  <File Type="OPT-DCP" Name="MCCPUSOC_Top_opt.dcp"/>
+  <File Type="OPT-DRC" Name="MCCPUSOC_Top_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="MCCPUSOC_Top_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="MCCPUSOC_Top_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="MCCPUSOC_Top_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="MCCPUSOC_Top_placed.dcp"/>
+  <File Type="PLACE-IO" Name="MCCPUSOC_Top_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="MCCPUSOC_Top_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="MCCPUSOC_Top_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="MCCPUSOC_Top_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="MCCPUSOC_Top_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="MCCPUSOC_Top_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="MCCPUSOC_Top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="MCCPUSOC_Top_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="MCCPUSOC_Top_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="MCCPUSOC_Top_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="MCCPUSOC_Top_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="MCCPUSOC_Top_drc_physopted.rpt"/>
+  <File Type="BG-BIT" Name="MCCPUSOC_Top.bit"/>
+  <File Type="PHYSOPT-TIMING" Name="MCCPUSOC_Top_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="MCCPUSOC_Top_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="MCCPUSOC_Top_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="MCCPUSOC_Top_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="MCCPUSOC_Top_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="MCCPUSOC_Top_drc_routed.pb"/>
+  <File Type="BITSTR-MSK" Name="MCCPUSOC_Top.msk"/>
+  <File Type="ROUTE-DRC-RPX" Name="MCCPUSOC_Top_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="MCCPUSOC_Top.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="MCCPUSOC_Top_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-RBT" Name="MCCPUSOC_Top.rbt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="MCCPUSOC_Top_methodology_drc_routed.rpx"/>
+  <File Type="BG-BIN" Name="MCCPUSOC_Top.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="MCCPUSOC_Top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="MCCPUSOC_Top_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="MCCPUSOC_Top_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="MCCPUSOC_Top_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="MCCPUSOC_Top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="MCCPUSOC_Top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="MCCPUSOC_Top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="MCCPUSOC_Top_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="MCCPUSOC_Top.vdi"/>
+  <File Type="ROUTE-CLK" Name="MCCPUSOC_Top_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="MCCPUSOC_Top_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="MCCPUSOC_Top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="MCCPUSOC_Top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="MCCPUSOC_Top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="MCCPUSOC_Top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="MCCPUSOC_Top.nky"/>
+  <File Type="BITSTR-BMM" Name="MCCPUSOC_Top_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="MCCPUSOC_Top.mmi"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="MCCPUSOC_Top.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="MCCPUSOC_Top.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/dmem/dmem.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/EXT.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MCCPU_SIM/EXT.v"/>
+        <Attr Name="ImportTime" Val="1571500074"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/MIO_BUS.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../code/source/MCCPU_FPGATop/MIO_BUS.v"/>
+        <Attr Name="ImportTime" Val="1571893928"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/Multi_CH32.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../code/source/MCCPU_FPGATop/Multi_CH32.v"/>
+        <Attr Name="ImportTime" Val="1571893972"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/RF.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MCCPU_SIM/RF.v"/>
+        <Attr Name="ImportTime" Val="1715853863"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/ctrl_encode_def.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MCCPU_SIM/ctrl_encode_def.v"/>
+        <Attr Name="ImportTime" Val="1715855760"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MCCPU_SIM/alu.v"/>
+        <Attr Name="ImportTime" Val="1715861065"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/clk_div.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../code/source/MCCPU_FPGATop/clk_div.v"/>
+        <Attr Name="ImportTime" Val="1572142094"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/ctrl.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MCCPU_SIM/ctrl.v"/>
+        <Attr Name="ImportTime" Val="1715877722"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/flopenr.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MCCPU_SIM/flopenr.v"/>
+        <Attr Name="ImportTime" Val="1715854810"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/flopr.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MCCPU_SIM/flopr.v"/>
+        <Attr Name="ImportTime" Val="1571662242"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/mccpu.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MCCPU_SIM/mccpu.v"/>
+        <Attr Name="ImportTime" Val="1715877734"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/mux.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MCCPU_SIM/mux.v"/>
+        <Attr Name="ImportTime" Val="1716455737"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/seg7x16.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../code/source/MCCPU_FPGATop/seg7x16.v"/>
+        <Attr Name="ImportTime" Val="1571893982"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/MCCPU_Top.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../code/source/MCCPU_FPGATop/MCCPU_Top.v"/>
+        <Attr Name="ImportTime" Val="1572073910"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/dm.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MCCPU_SIM/dm.v"/>
+        <Attr Name="ImportTime" Val="1572064098"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/mccomp.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MCCPU_SIM/mccomp.v"/>
+        <Attr Name="ImportTime" Val="1572074862"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/mccomp_tb.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MCCPU_SIM/mccomp_tb.v"/>
+        <Attr Name="ImportTime" Val="1715878162"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../studentnosorting.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="MCCPUSOC_Top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/source/Nexys4DDR_CPU.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../code/source/Nexys4DDR_CPU.xdc"/>
+        <Attr Name="ImportTime" Val="1548777796"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

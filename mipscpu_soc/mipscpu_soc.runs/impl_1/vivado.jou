@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu May 23 20:41:02 2024
+# Process ID: 43184
+# Current directory: D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.runs/impl_1
+# Command line: vivado.exe -log MCCPUSOC_Top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source MCCPUSOC_Top.tcl -notrace
+# Log file: D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.runs/impl_1/MCCPUSOC_Top.vdi
+# Journal file: D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source MCCPUSOC_Top.tcl -notrace

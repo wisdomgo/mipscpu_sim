@@ -1,0 +1,497 @@
+
+*** Running vivado
+    with args -log MCCPUSOC_Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source MCCPUSOC_Top.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source MCCPUSOC_Top.tcl -notrace
+Command: synth_design -top MCCPUSOC_Top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8420 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 400.582 ; gain = 97.531
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'MCCPUSOC_Top' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/MCCPU_Top.v:3]
+INFO: [Synth 8-638] synthesizing module 'clk_div' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/clk_div.v:21]
+INFO: [Synth 8-256] done synthesizing module 'clk_div' (1#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/clk_div.v:21]
+INFO: [Synth 8-638] synthesizing module 'mccpu' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/mccpu.v:1]
+INFO: [Synth 8-638] synthesizing module 'ctrl' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/ctrl.v:4]
+	Parameter sif bound to: 3'b000 
+	Parameter sid bound to: 3'b001 
+	Parameter sexe bound to: 3'b010 
+	Parameter smem bound to: 3'b011 
+	Parameter swb bound to: 3'b100 
+INFO: [Synth 8-256] done synthesizing module 'ctrl' (2#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/ctrl.v:4]
+INFO: [Synth 8-638] synthesizing module 'flopenr' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/flopenr.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'flopenr' (3#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/flopenr.v:1]
+INFO: [Synth 8-638] synthesizing module 'mux4' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/mux.v:15]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/mux.v:26]
+INFO: [Synth 8-256] done synthesizing module 'mux4' (4#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/mux.v:15]
+INFO: [Synth 8-638] synthesizing module 'mux2' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/mux.v:2]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2' (5#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/mux.v:2]
+INFO: [Synth 8-638] synthesizing module 'flopr' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/flopr.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'flopr' (6#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/flopr.v:1]
+INFO: [Synth 8-638] synthesizing module 'RF' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/RF.v:2]
+WARNING: [Synth 8-5788] Register rf_reg[0] in module RF is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/RF.v:18]
+INFO: [Synth 8-256] done synthesizing module 'RF' (7#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/RF.v:2]
+INFO: [Synth 8-638] synthesizing module 'EXT' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/EXT.v:2]
+INFO: [Synth 8-256] done synthesizing module 'EXT' (8#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/EXT.v:2]
+INFO: [Synth 8-638] synthesizing module 'alu' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v:3]
+INFO: [Synth 8-256] done synthesizing module 'alu' (9#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/alu.v:3]
+INFO: [Synth 8-638] synthesizing module 'mux4__parameterized0' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/mux.v:15]
+	Parameter WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/mux.v:26]
+INFO: [Synth 8-256] done synthesizing module 'mux4__parameterized0' (9#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/mux.v:15]
+INFO: [Synth 8-256] done synthesizing module 'mccpu' (10#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/mipscpu_sim/MCCPU_SIM/mccpu.v:1]
+INFO: [Synth 8-638] synthesizing module 'dmem' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.runs/synth_1/.Xil/Vivado-32340-DESKTOP-KITILU9/realtime/dmem_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'dmem' (11#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.runs/synth_1/.Xil/Vivado-32340-DESKTOP-KITILU9/realtime/dmem_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'MIO_BUS' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/MIO_BUS.v:24]
+INFO: [Synth 8-256] done synthesizing module 'MIO_BUS' (12#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/MIO_BUS.v:24]
+INFO: [Synth 8-638] synthesizing module 'Multi_CH32' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/Multi_CH32.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Multi_CH32' (13#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/Multi_CH32.v:23]
+INFO: [Synth 8-638] synthesizing module 'seg7x16' [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/seg7x16.v:21]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/seg7x16.v:87]
+INFO: [Synth 8-256] done synthesizing module 'seg7x16' (14#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/seg7x16.v:21]
+INFO: [Synth 8-256] done synthesizing module 'MCCPUSOC_Top' (15#1) [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/MCCPU_Top.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 452.336 ; gain = 149.285
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 452.336 ; gain = 149.285
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.runs/synth_1/.Xil/Vivado-32340-DESKTOP-KITILU9/dcp1/dmem_in_context.xdc] for cell 'U_DM'
+Finished Parsing XDC File [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.runs/synth_1/.Xil/Vivado-32340-DESKTOP-KITILU9/dcp1/dmem_in_context.xdc] for cell 'U_DM'
+Parsing XDC File [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/constrs_1/imports/source/Nexys4DDR_CPU.xdc]
+Finished Parsing XDC File [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/constrs_1/imports/source/Nexys4DDR_CPU.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/constrs_1/imports/source/Nexys4DDR_CPU.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/MCCPUSOC_Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/MCCPUSOC_Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 815.023 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 815.023 ; gain = 511.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 815.023 ; gain = 511.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U_DM. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 815.023 ; gain = 511.973
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element clkdiv_reg was removed.  [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/clk_div.v:32]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ctrl'
+INFO: [Synth 8-5544] ROM "IorD" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "IRWrite" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "IorD" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "IRWrite" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ALUSrcA" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "WDSel" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "rf_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rf_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "o_seg_r" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/seg7x16.v:34]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                     sif |                              000 |                              000
+                     sid |                              001 |                              001
+                    sexe |                              010 |                              010
+                    smem |                              011 |                              011
+                     swb |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ctrl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 815.023 ; gain = 511.973
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 40    
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 8     
+	   3 Input     32 Bit        Muxes := 3     
+	  11 Input     32 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	  13 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 7     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 42    
+	   5 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clk_div 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module ctrl 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+	  13 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 7     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 7     
+	   5 Input      1 Bit        Muxes := 6     
+Module flopenr 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mux4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module mux2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module flopr 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module RF 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 32    
+Module EXT 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
+Module mux4__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      5 Bit        Muxes := 1     
+Module MIO_BUS 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   3 Input     32 Bit        Muxes := 3     
+	   2 Input      7 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
+Module Multi_CH32 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	  11 Input     32 Bit        Muxes := 1     
+Module seg7x16 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element U_CLKDIV/clkdiv_reg was removed.  [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/clk_div.v:32]
+WARNING: [Synth 8-6014] Unused sequential element U_7SEG/cnt_reg was removed.  [D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.srcs/sources_1/imports/mipscpu/code/source/MCCPU_FPGATop/seg7x16.v:34]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U_7SEG/o_seg_r_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (U_CLKDIV/clkdiv_reg[26]) is unused and will be removed from module MCCPUSOC_Top.
+WARNING: [Synth 8-3332] Sequential element (U_CLKDIV/clkdiv_reg[27]) is unused and will be removed from module MCCPUSOC_Top.
+WARNING: [Synth 8-3332] Sequential element (U_CLKDIV/clkdiv_reg[28]) is unused and will be removed from module MCCPUSOC_Top.
+WARNING: [Synth 8-3332] Sequential element (U_CLKDIV/clkdiv_reg[29]) is unused and will be removed from module MCCPUSOC_Top.
+WARNING: [Synth 8-3332] Sequential element (U_CLKDIV/clkdiv_reg[30]) is unused and will be removed from module MCCPUSOC_Top.
+WARNING: [Synth 8-3332] Sequential element (U_CLKDIV/clkdiv_reg[31]) is unused and will be removed from module MCCPUSOC_Top.
+WARNING: [Synth 8-3332] Sequential element (U_7SEG/o_seg_r_reg[7]) is unused and will be removed from module MCCPUSOC_Top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 815.023 ; gain = 511.973
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 827.910 ; gain = 524.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 840.562 ; gain = 537.512
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 909.535 ; gain = 606.484
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 909.535 ; gain = 606.484
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 909.535 ; gain = 606.484
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 909.535 ; gain = 606.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 909.535 ; gain = 606.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 909.535 ; gain = 606.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 909.535 ; gain = 606.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |dmem          |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |dmem   |     1|
+|2     |BUFG   |     2|
+|3     |CARRY4 |    35|
+|4     |LUT1   |    14|
+|5     |LUT2   |   143|
+|6     |LUT3   |    59|
+|7     |LUT4   |   164|
+|8     |LUT5   |   173|
+|9     |LUT6   |  1471|
+|10    |MUXF7  |   450|
+|11    |MUXF8  |    66|
+|12    |FDCE   |  1285|
+|13    |FDPE   |    23|
+|14    |FDRE   |    32|
+|15    |IBUF   |    18|
+|16    |OBUF   |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------+---------------------+------+
+|      |Instance          |Module               |Cells |
++------+------------------+---------------------+------+
+|1     |top               |                     |  3983|
+|2     |  U_7SEG          |seg7x16              |    94|
+|3     |  U_CLKDIV        |clk_div              |    35|
+|4     |  U_MCCPU         |mccpu                |  3627|
+|5     |    U_ALUR        |flopr                |    32|
+|6     |    U_AR          |flopr_0              |    34|
+|7     |    U_BR          |flopr_1              |    32|
+|8     |    U_CTRL        |ctrl                 |   304|
+|9     |    U_DataR       |flopr_2              |    33|
+|10    |    U_IR          |flopenr              |   579|
+|11    |    U_MUX4_GPR_A3 |mux4__parameterized0 |     5|
+|12    |    U_MUX4_GPR_WD |mux4                 |    33|
+|13    |    U_MUX4_PC     |mux4_3               |    34|
+|14    |    U_MUX_ADR     |mux2                 |    32|
+|15    |    U_MUX_ALU_A   |mux4_4               |    44|
+|16    |    U_MUX_ALU_B   |mux4_5               |    35|
+|17    |    U_PC          |flopenr_6            |   147|
+|18    |    U_RF          |RF                   |  2283|
+|19    |  U_Multi         |Multi_CH32           |   159|
++------+------------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 909.535 ; gain = 606.484
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 909.535 ; gain = 243.797
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 909.535 ; gain = 606.484
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 569 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+95 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 909.535 ; gain = 617.965
+INFO: [Common 17-1381] The checkpoint 'D:/class/mipscpu/mipscpu_sim/mipscpu_soc/mipscpu_soc.runs/synth_1/MCCPUSOC_Top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file MCCPUSOC_Top_utilization_synth.rpt -pb MCCPUSOC_Top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 909.535 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu May 23 20:40:56 2024...
