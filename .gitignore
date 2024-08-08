@@ -2,3 +2,7 @@ wlf*
 work/
 mipscpu_sim.mpf
 *.wlf
+studentnosorting.*
+1.dat
+latex source
+*.zip

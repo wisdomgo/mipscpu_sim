@@ -5,7 +5,7 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	ctrl
 
-} {} {}} D:/class/mipscpu/mipscpu_sim/SCCPU_SIM/sccomp.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/SCCPU_SIM/sccomp.v
+} {} {}} D:/class/mipscpu/mipscpu_sim/SCCPU_SIM/sccomp.v {1 {vlog -work work -vopt {D:\class\mipscpu\mipscpu_sim\SCCPU_SIM\sccomp.v}
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module sccomp
 
@@ -32,13 +32,6 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 
 Top level modules:
 	dm
-
-} {} {}} D:/class/mipscpu/mipscpu_sim/SCCPU_SIM/sccomp_tb.v {1 {vlog -work work -vopt {D:\class\mipscpu\mipscpu_sim\SCCPU_SIM\sccomp_tb.v}
-Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module sccomp_tb
-
-Top level modules:
-	sccomp_tb
 
 } {} {}} D:/class/mipscpu/mipscpu_sim/SCCPU_SIM/PC.v {1 {vlog -work work -vopt D:/class/mipscpu/mipscpu_sim/SCCPU_SIM/PC.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
